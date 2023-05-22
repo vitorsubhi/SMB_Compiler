@@ -14,17 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Install Build-essential
-      run: sudo apt install -y build-essential 
-
-    - name: Install Flex & Bison
-      run: sudo apt install -y flex bison
-
     - name: Build
       run: make
 
     - name: Run Test
-      run: ./parser output.txt
-
-    - name: Return output
-      run: cat output.txt
+      run: ./parser teste.txt
